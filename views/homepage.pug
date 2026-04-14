@@ -1,17 +1,13 @@
 html
   head
     title= title
+    link(rel="stylesheet" href="/css/style.css")
   body
+    h1 Cars
     a(href="/update-cobj") Add to this table
-    table
-      thead
-        tr
-          th Brand Name
-          th Engine Displacement
-          th Price
-      tbody
-        each record in data
-          tr
-            td= record.properties.brand_name
-            td= record.properties.fm_car_engine_displacement
-            td= record.properties.fm_price
+    .cards
+      each record in data
+        .card
+          p.card__email Brand: #{record.properties.brand_name}
+          p Engine: #{record.properties.fm_car_engine_displacement}
+          p Price: #{record.properties.fm_price}€
