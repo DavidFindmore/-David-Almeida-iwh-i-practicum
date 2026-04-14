@@ -1,0 +1,13 @@
+html
+  head
+    title= title
+  body
+    a(href="/") Return to the homepage
+    form(method="POST" action="/update-cobj")
+      label Brand Name
+      input(type="text" name="brand_name")
+      label Engine Displacement
+      input(type="text" name="fm_car_engine_displacement")
+      label Price
+      input(type="text" name="fm_price")
+      button(type="submit") Submit

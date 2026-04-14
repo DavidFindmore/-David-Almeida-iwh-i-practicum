@@ -1,0 +1,17 @@
+html
+  head
+    title= title
+  body
+    a(href="/update-cobj") Add to this table
+    table
+      thead
+        tr
+          th Brand Name
+          th Engine Displacement
+          th Price
+      tbody
+        each record in data
+          tr
+            td= record.properties.brand_name
+            td= record.properties.fm_car_engine_displacement
+            td= record.properties.fm_price
